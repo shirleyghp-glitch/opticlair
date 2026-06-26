@@ -71,7 +71,7 @@ const OptiqueHero = () => {
             <Card className="overflow-hidden rounded-[2rem] border-0 bg-slate-950 shadow-2xl shadow-slate-950/15">
               <div className="relative">
                 <img
-                  src="/images/photo-4.png"
+                  src="/images/hero-unsplash.jpg"
                   alt="Client essayant une monture élégante chez l'opticien"
                   className="h-[520px] w-full object-cover"
                 />

@@ -5,22 +5,22 @@ const collections = [
   {
     title: "Montures optiques",
     description: "Des lignes discrètes ou affirmées pour un usage quotidien confortable et stylé.",
-    image: "/images/collection-1.png",
+    image: "/images/collection-unsplash-1.jpg",
   },
   {
     title: "Lunettes solaires",
     description: "Une protection efficace avec des formes modernes et faciles à porter.",
-    image: "/images/collection-2.png",
+    image: "/images/collection-unsplash-2.jpg",
   },
   {
     title: "Univers féminin",
     description: "Des montures délicates et contemporaines pour sublimer le regard.",
-    image: "/images/collection-3.png",
+    image: "/images/collection-unsplash-3.jpg",
   },
   {
     title: "Style signature",
     description: "Des pièces marquantes pour celles et ceux qui aiment une vraie présence.",
-    image: "/images/collection-4.png",
+    image: "/images/collection-unsplash-4.jpg",
   },
 ];
 
