@@ -22,9 +22,11 @@ const OptiqueHeader = () => {
               <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Opticien-lunetier</p>
             </div>
           </a>
-          <Button variant="outline" className="h-11 rounded-full border-slate-300 px-4 text-slate-700 lg:hidden">
-            <PhoneCall className="mr-2 h-4 w-4" />
-            Appeler
+          <Button asChild variant="outline" className="h-11 rounded-full border-slate-300 px-4 text-slate-700 lg:hidden">
+            <a href="tel:+33184063252">
+              <PhoneCall className="mr-2 h-4 w-4" />
+              01 84 06 32 52
+            </a>
           </Button>
         </div>
 
