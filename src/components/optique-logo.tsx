@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const logoSrc = "/images/opticlair-logo.jpg";
+const logoSrc = "/images/logo.jpg";
 
 type OptiqueLogoProps = {
   className?: string;
