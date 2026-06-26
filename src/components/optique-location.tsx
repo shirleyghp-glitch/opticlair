@@ -6,18 +6,18 @@ import { Card, CardContent } from "@/components/ui/card";
 const locationInfo = [
   {
     icon: MapPin,
-    title: "Localisation",
-    value: "Paris, au cœur du quartier indiqué sur Google Maps",
+    title: "Adresse",
+    value: "Opticlair · Paris (quartier indiqué sur la carte)",
   },
   {
     icon: Clock3,
-    title: "Accueil",
-    value: "Du mardi au samedi · 10h00 – 19h30",
+    title: "Horaires",
+    value: "Mar – Sam · 10h00 – 19h30",
   },
   {
     icon: PhoneCall,
-    title: "Contact",
-    value: "Demande rapide via le formulaire du site",
+    title: "Téléphone",
+    value: "01 84 06 32 52",
   },
 ];
 

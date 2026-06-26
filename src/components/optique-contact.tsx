@@ -27,7 +27,9 @@ const OptiqueContact = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    showSuccess("Votre demande a bien été envoyée.");
+    const message = `Bonjour Opticlair ! Je souhaite un rendez-vous.%0A%0ANom : ${encodeURIComponent(form.name)}%0ATéléphone : ${encodeURIComponent(form.phone)}%0AEmail : ${encodeURIComponent(form.email)}%0AMessage : ${encodeURIComponent(form.message)}`;
+    window.open(`https://wa.me/33652158598?text=${message}`, "_blank");
+    showSuccess("Vous allez être redirigé vers WhatsApp pour finaliser votre demande.");
     setForm(initialForm);
   };
 

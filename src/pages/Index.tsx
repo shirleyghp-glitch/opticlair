@@ -1,4 +1,5 @@
 import OptiqueBrands from "@/components/optique-brands";
+import OptiqueChatbot from "@/components/optique-chatbot";
 import OptiqueCollections from "@/components/optique-collections";
 import OptiqueContact from "@/components/optique-contact";
 import OptiqueFooter from "@/components/optique-footer";
@@ -22,6 +23,7 @@ const Index = () => {
       <OptiqueLocation />
       <OptiqueContact />
       <OptiqueFooter />
+      <OptiqueChatbot />
     </main>
   );
 };
