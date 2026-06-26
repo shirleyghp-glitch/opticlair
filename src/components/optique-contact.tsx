@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { showSuccess } from "@/utils/toast";
+import { showError, showSuccess } from "@/utils/toast";
 
 const contactPoints = [
   { icon: MapPin, label: "Adresse", value: "Opticlair, Paris" },
@@ -25,12 +25,27 @@ const initialForm = {
 const OptiqueContact = () => {
   const [form, setForm] = useState(initialForm);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const message = `Bonjour Opticlair ! Je souhaite un rendez-vous.%0A%0ANom : ${encodeURIComponent(form.name)}%0ATéléphone : ${encodeURIComponent(form.phone)}%0AEmail : ${encodeURIComponent(form.email)}%0AMessage : ${encodeURIComponent(form.message)}`;
-    window.open(`https://wa.me/33652158598?text=${message}`, "_blank");
-    showSuccess("Vous allez être redirigé vers WhatsApp pour finaliser votre demande.");
-    setForm(initialForm);
+    setSending(true);
+    try {
+      const res = await fetch("https://formspree.io/f/maqgoepg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        showSuccess("Votre message a bien été envoyé. Nous vous répondrons rapidement.");
+        setForm(initialForm);
+      } else {
+        showError("Une erreur est survenue. Veuillez réessayer ou nous appeler.");
+      }
+    } catch {
+      showError("Une erreur est survenue. Veuillez réessayer ou nous appeler.");
+    }
+    setSending(false);
   };
 
   return (
@@ -100,8 +115,8 @@ const OptiqueContact = () => {
                 value={form.message}
                 onChange={(e) => setForm((current) => ({ ...current, message: e.target.value }))}
               />
-              <Button className="h-12 w-full rounded-full bg-emerald-600 text-base text-white hover:bg-emerald-700">
-                Envoyer ma demande
+              <Button disabled={sending} className="h-12 w-full rounded-full bg-emerald-600 text-base text-white hover:bg-emerald-700 disabled:opacity-60">
+                {sending ? "Envoi en cours..." : "Envoyer ma demande"}
               </Button>
               <p className="text-sm leading-6 text-slate-500">
                 Nous vous recontactons dès que possible pour confirmer votre créneau.
