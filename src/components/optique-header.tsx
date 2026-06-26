@@ -4,7 +4,9 @@ import OptiqueLogo from "@/components/optique-logo";
 
 const links = [
   { href: "#services", label: "Services" },
+  { href: "#marques", label: "Marques" },
   { href: "#collections", label: "Collections" },
+  { href: "#galerie", label: "Galerie" },
   { href: "#avis", label: "Avis" },
   { href: "#localisation", label: "Nous trouver" },
   { href: "#contact", label: "Contact" },
@@ -48,7 +50,7 @@ const OptiqueHeader = () => {
             Paris
           </div>
           <Button asChild className="h-11 rounded-full bg-emerald-600 px-5 text-white hover:bg-emerald-700">
-            <a href="#contact">
+            <a href="https://wa.me/33652158598" target="_blank" rel="noreferrer">
               <PhoneCall className="mr-2 h-4 w-4" />
               Prendre rendez-vous
             </a>

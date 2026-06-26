@@ -1,6 +1,8 @@
+import OptiqueBrands from "@/components/optique-brands";
 import OptiqueCollections from "@/components/optique-collections";
 import OptiqueContact from "@/components/optique-contact";
 import OptiqueFooter from "@/components/optique-footer";
+import OptiqueGallery from "@/components/optique-gallery";
 import OptiqueHeader from "@/components/optique-header";
 import OptiqueHero from "@/components/optique-hero";
 import OptiqueLocation from "@/components/optique-location";
@@ -13,7 +15,9 @@ const Index = () => {
       <OptiqueHeader />
       <OptiqueHero />
       <OptiqueServices />
+      <OptiqueBrands />
       <OptiqueCollections />
+      <OptiqueGallery />
       <OptiqueTestimonials />
       <OptiqueLocation />
       <OptiqueContact />

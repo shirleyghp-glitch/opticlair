@@ -40,7 +40,7 @@ const OptiqueHero = () => {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild className="h-12 rounded-full bg-slate-950 px-6 text-base text-white hover:bg-slate-800">
-                <a href="#contact">
+                <a href="https://wa.me/33652158598" target="_blank" rel="noreferrer">
                   Prendre rendez-vous
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
