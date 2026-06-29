@@ -1,5 +1,5 @@
 import { type FormEvent, useState } from "react";
-import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock3, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +13,7 @@ const contactPoints = [
   { icon: MessageCircle, label: "WhatsApp", value: "06 52 15 85 98" },
   { icon: Mail, label: "Email", value: "opticlair.paris@gmail.com" },
   { icon: Clock3, label: "Horaires", value: "Mar-Sam · 10h00 – 19h30" },
+  { icon: Globe, label: "Langues", value: "Français, Anglais, Espagnol, Arabe, Portugais" },
 ];
 
 const initialForm = {
